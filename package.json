@@ -1,0 +1,23 @@
+{
+  "name": "hapi-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server.js",
+  "scripts": {
+    "dev:tsc": "tsc --watch -p .",
+    "dev:serve": "nodemon -e js -w lib lib/server.js",
+    "dev": "run-p dev:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.1"
+  },
+  "devDependencies": {
+    "@types/hapi": "^18.0.8",
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.0.4"
+  }
+}
