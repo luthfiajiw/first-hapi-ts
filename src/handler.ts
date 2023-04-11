@@ -1,6 +1,6 @@
 import { ReqRefDefaults, Request, ResponseToolkit, ResponseObject } from "@hapi/hapi";
 import { v4 as uuidv4 } from 'uuid';
-import {notes, NotePayload, Note} from "./notes";
+import {notes, NotePayload, Note, Response} from "./notes";
 
 function addNoteHandler(
     request: Request<ReqRefDefaults>,
@@ -44,4 +44,13 @@ function addNoteHandler(
     return Promise.reject(response)
 }
 
-export { addNoteHandler }
+function getNotesHandler(): Response {
+    return {
+        status: "success",
+        data: {
+            notes
+        }
+    }
+}
+
+export { addNoteHandler, getNotesHandler }

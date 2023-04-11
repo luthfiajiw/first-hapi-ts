@@ -1,5 +1,5 @@
 import { ReqRefDefaults, ServerRoute } from "@hapi/hapi";
-import { addNoteHandler } from "./handler";
+import { addNoteHandler, getNotesHandler } from "./handler";
 
 const routes: ServerRoute<ReqRefDefaults>[] = [
     {
@@ -7,6 +7,11 @@ const routes: ServerRoute<ReqRefDefaults>[] = [
         path: '/notes',
         handler: addNoteHandler,
     },
+    {
+        method: 'GET',
+        path: '/notes',
+        handler: getNotesHandler
+    }
 
 ]
 

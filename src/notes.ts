@@ -1,3 +1,12 @@
+interface Response {
+    status: string
+    data: Data
+}
+
+interface Data {
+    notes: Note[]
+}
+
 interface NotePayload {
     title: string
     tags: string[]
@@ -15,4 +24,4 @@ interface Note {
 
 const notes: Note[] = [];
 
-export {NotePayload, Note, notes}
+export {Response, NotePayload, Note, notes}
