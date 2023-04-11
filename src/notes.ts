@@ -1,10 +1,12 @@
 interface Response {
     status: string
-    data: Data
+    message?: string
+    data?: Data
 }
 
 interface Data {
-    notes: Note[]
+    notes?: Note[]
+    note?: Note
 }
 
 interface NotePayload {
