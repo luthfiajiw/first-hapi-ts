@@ -6,6 +6,7 @@
   "scripts": {
     "dev:tsc": "tsc --watch -p .",
     "dev:serve": "nodemon -e js -w lib lib/server.js",
+    "prod:serve": "NODE_ENV=production nodemon -e js -w lib lib/server.js",
     "dev": "run-p dev:*"
   },
   "author": "",
